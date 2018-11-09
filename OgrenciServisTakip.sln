@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgrenciServisTakip", "OgrenciServisTakip\OgrenciServisTakip.csproj", "{9F6A4299-C549-4418-99C3-0BD18FD0BC32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgrenciServisTakip.API", "OgrenciServisTakip.API\OgrenciServisTakip.API.csproj", "{38627093-0E10-4ADB-835E-92B1E5660619}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgrenciServisTakip.DAL", "OgrenciServisTakip.DAL\OgrenciServisTakip.DAL.csproj", "{CCBBB263-6148-4012-9A47-AA97C2793367}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{9F6A4299-C549-4418-99C3-0BD18FD0BC32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F6A4299-C549-4418-99C3-0BD18FD0BC32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F6A4299-C549-4418-99C3-0BD18FD0BC32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38627093-0E10-4ADB-835E-92B1E5660619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38627093-0E10-4ADB-835E-92B1E5660619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38627093-0E10-4ADB-835E-92B1E5660619}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38627093-0E10-4ADB-835E-92B1E5660619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCBBB263-6148-4012-9A47-AA97C2793367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCBBB263-6148-4012-9A47-AA97C2793367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCBBB263-6148-4012-9A47-AA97C2793367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCBBB263-6148-4012-9A47-AA97C2793367}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
