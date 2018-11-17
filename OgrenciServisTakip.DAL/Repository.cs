@@ -6,13 +6,13 @@ using System.Linq.Expressions;
 
 namespace OgrenciServisTakip.DAL
 {
-    public class Repository<T> : IRepository<T> where T : EntityBase
+    public class Repository<T> : IRepository<T> where T : class
     {
         private readonly DbContext _dbContext;
 
         public Repository(DbContext dbContext)
         {
-            _dbContext = dbContext;
+            _dbContext = dbContext;            
         }
 
         public virtual T GetByID(int id)
@@ -20,10 +20,10 @@ namespace OgrenciServisTakip.DAL
             return _dbContext.Set<T>().Find(id);
         }
 
-        public virtual IEnumerable<T> List()
+        public virtual IEnumerable<T> GetAll()
         {
             return _dbContext.Set<T>().AsEnumerable();
-        }   
+        }
 
         public virtual IEnumerable<T> List(Expression<Func<T, bool>> predicate)
         {
