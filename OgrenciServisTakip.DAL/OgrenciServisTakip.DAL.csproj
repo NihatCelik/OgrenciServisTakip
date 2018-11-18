@@ -11,6 +11,7 @@
     <AssemblyName>OgrenciServisTakip.DAL</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,6 +40,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -50,17 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\CompanyContext.cs" />
-    <Compile Include="EntityBase.cs" />
     <Compile Include="IRepository.cs" />
-    <Compile Include="Migrations\201811101716351_Initial.cs" />
-    <Compile Include="Migrations\201811101716351_Initial.Designer.cs">
-      <DependentUpon>201811101716351_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201811101718117_IsActive.cs" />
-    <Compile Include="Migrations\201811101718117_IsActive.Designer.cs">
-      <DependentUpon>201811101718117_IsActive.cs</DependentUpon>
+    <Compile Include="Migrations\201811181210207_Initial.cs" />
+    <Compile Include="Migrations\201811181210207_Initial.Designer.cs">
+      <DependentUpon>201811181210207_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\CompanyContext.cs" />
+    <Compile Include="Migrations\CustomSqlServerMigrationSqlGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\User.cs" />
     <Compile Include="Repository.cs" />
@@ -79,13 +77,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201811101716351_Initial.resx">
-      <DependentUpon>201811101716351_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811101718117_IsActive.resx">
-      <DependentUpon>201811101718117_IsActive.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201811181210207_Initial.resx">
+      <DependentUpon>201811181210207_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

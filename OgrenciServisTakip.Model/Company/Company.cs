@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace OgrenciServisTakip.Model.Company
 {
     [Table("tblCompany")]
-    public class Company
+    public class Company : EntityBase
     {
         [Key]
         public int CompanyID { get; set; }
@@ -19,10 +19,6 @@ namespace OgrenciServisTakip.Model.Company
         [Required]
         [MaxLength(50)]
         public string CompanyName { get; set; }
-
-        public bool IsActive { get; set; } = false;
-
-        public DateTime RecordDate { get; set; } = DateTime.Now;
 
         public virtual ICollection<Branch> Branches { get; set; }
     }

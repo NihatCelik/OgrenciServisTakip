@@ -1,11 +1,12 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OgrenciServisTakip.Model.Company
 {
     [Table("tblUser")]
-    public class User
+    public class User : EntityBase
     {
         [Key]
         public int UserID { get; set; }
@@ -29,9 +30,5 @@ namespace OgrenciServisTakip.Model.Company
 
         [MaxLength(15)]
         public string Surname { get; set; }
-
-        public bool IsActive { get; set; } = false;
-
-        public DateTime RecordDate { get; set; } = DateTime.Now;
     }
 }

@@ -15,7 +15,7 @@ namespace OgrenciServisTakip.DAL.Migrations
                         CompanyID = c.Int(nullable: false),
                         BranchName = c.String(nullable: false, maxLength: 25),
                         IsActive = c.Boolean(nullable: false),
-                        RecordDate = c.DateTime(nullable: false),
+                        CreatedDate = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.BranchID)
                 .ForeignKey("dbo.tblCompany", t => t.CompanyID, cascadeDelete: true)
@@ -33,7 +33,7 @@ namespace OgrenciServisTakip.DAL.Migrations
                         Name = c.String(nullable: false, maxLength: 15),
                         Surname = c.String(maxLength: 15),
                         IsActive = c.Boolean(nullable: false),
-                        RecordDate = c.DateTime(nullable: false),
+                        CreatedDate = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.UserID)
                 .ForeignKey("dbo.tblBranch", t => t.BranchID, cascadeDelete: true)
@@ -47,7 +47,7 @@ namespace OgrenciServisTakip.DAL.Migrations
                         DealerCode = c.String(nullable: false, maxLength: 5),
                         CompanyName = c.String(nullable: false, maxLength: 50),
                         IsActive = c.Boolean(nullable: false),
-                        RecordDate = c.DateTime(nullable: false),
+                        CreatedDate = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.CompanyID);
             
