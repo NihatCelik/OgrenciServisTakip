@@ -53,9 +53,9 @@
   <ItemGroup>
     <Compile Include="Context\CompanyContext.cs" />
     <Compile Include="IRepository.cs" />
-    <Compile Include="Migrations\201811181210207_Initial.cs" />
-    <Compile Include="Migrations\201811181210207_Initial.Designer.cs">
-      <DependentUpon>201811181210207_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201811191035411_Initial.cs" />
+    <Compile Include="Migrations\201811191035411_Initial.Designer.cs">
+      <DependentUpon>201811191035411_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\CompanyContext.cs" />
     <Compile Include="Migrations\CustomSqlServerMigrationSqlGenerator.cs" />
@@ -77,8 +77,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201811181210207_Initial.resx">
-      <DependentUpon>201811181210207_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201811191035411_Initial.resx">
+      <DependentUpon>201811191035411_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
