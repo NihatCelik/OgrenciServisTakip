@@ -13,7 +13,7 @@ namespace OgrenciServisTakip.DAL.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201811191035411_Initial"; }
+            get { return "201811191746193_Initial"; }
         }
         
         string IMigrationMetadata.Source

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace OgrenciServisTakip.Model
 {
-    public class Global
+    public class Global : EntityBase
     {
         [Required]
         public int CompanyID { get; set; }
@@ -13,11 +13,5 @@ namespace OgrenciServisTakip.Model
 
         [Required]
         public int UserID { get; set; }
-
-        [Required]
-        public bool IsActive { get; set; }
-
-        [Required]
-        public DateTime RecordDate { get; set; }
     }
 }

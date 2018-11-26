@@ -10,26 +10,7 @@ namespace OgrenciServisTakip.DAL.Repositories
     {
         public ResporitoryUser(DbContext dbContext) : base(dbContext)
         {
-        }
 
-        public override void Add(User entity)
-        {
-            base.Add(entity);
-        }
-
-        public override void Delete(User entity)
-        {
-            base.Delete(entity);
-        }
-
-        public override User GetByID(int id)
-        {
-            return base.GetByID(id);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
         }
 
         public override IEnumerable<User> GetAll()
@@ -37,19 +18,29 @@ namespace OgrenciServisTakip.DAL.Repositories
             return base.GetAll();
         }
 
+        public override User GetByID(int id)
+        {
+            return base.GetByID(id);
+        } 
+
         public override IEnumerable<User> List(Expression<Func<User, bool>> predicate)
         {
             return base.List(predicate);
         }
 
-        public override string ToString()
+        public override void Add(User entity)
         {
-            return base.ToString();
+            base.Add(entity);
         }
 
         public override void Update(User entity)
         {
             base.Update(entity);
         }
+
+        public override void Delete(User entity)
+        {
+            base.Delete(entity);
+        } 
     }
 }
