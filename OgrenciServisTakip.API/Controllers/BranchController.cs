@@ -4,6 +4,7 @@ using System.Web.Http;
 
 namespace OgrenciServisTakip.API.Controllers
 {
+    [Authorize]
     public class BranchController : ApiController
     {
         [HttpGet]

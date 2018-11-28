@@ -4,8 +4,9 @@ using System.Web.Http;
 
 namespace OgrenciServisTakip.API.Controllers
 {
+    [Authorize]
     public class CompanyController : ApiController
-    {
+    { 
         [HttpGet]
         public IHttpActionResult GetCompanies()
         {

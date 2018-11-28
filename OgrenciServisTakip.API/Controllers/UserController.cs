@@ -1,13 +1,13 @@
 ﻿using OgrenciServisTakip.DAL.Repositories;
 using OgrenciServisTakip.Model.Company;
-using System;
 using System.Linq;
 using System.Web.Http;
 
 namespace OgrenciServisTakip.API.Controllers
 {
+    [Authorize]
     public class UserController : ApiController
-    {
+    { 
         [HttpGet]
         public IHttpActionResult GetUsers()
         {
@@ -15,6 +15,7 @@ namespace OgrenciServisTakip.API.Controllers
             return Ok(resporitoryUser.GetAll());
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public IHttpActionResult GetUsers(string userName, string password)
         {
