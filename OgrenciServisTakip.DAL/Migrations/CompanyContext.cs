@@ -6,15 +6,15 @@ namespace OgrenciServisTakip.DAL.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class CompanyContext : DbMigrationsConfiguration<DAL.CompanyContext>
+    internal sealed class CompanyContext : DbMigrationsConfiguration<DAL.MyContext>
     {
         public CompanyContext()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             SetSqlGenerator("System.Data.SqlClient", new CustomSqlServerMigrationSqlGenerator());
         }
 
-        protected override void Seed(DAL.CompanyContext context)
+        protected override void Seed(DAL.MyContext context)
         {
             context.Companies.Add(new Company
             {

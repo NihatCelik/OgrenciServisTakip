@@ -1,10 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OgrenciServisTakip.Model.Company
 {
     [Table("tblUser")]
-    public class User : EntityBase
+    public class User
     {
         [Key]
         public int UserID { get; set; }
@@ -13,6 +14,8 @@ namespace OgrenciServisTakip.Model.Company
 
         [Required]
         public int CompanyID { get; set; }
+        [ForeignKey("CompanyID")]
+        public Company ApplicationCompanyID { get; set; }
 
         [Required]
         [MaxLength(20)]
@@ -28,5 +31,11 @@ namespace OgrenciServisTakip.Model.Company
 
         [MaxLength(15)]
         public string Surname { get; set; }
+
+        [Required, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public bool IsActive { get; set; }
+
+        [Required, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public DateTime CreatedDate { get; set; }
     }
 }

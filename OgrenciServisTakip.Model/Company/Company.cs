@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OgrenciServisTakip.Model.Company
 {
     [Table("tblCompany")]
-    public class Company : EntityBase
+    public class Company
     {
         [Key]
         public int CompanyID { get; set; }
@@ -19,6 +18,12 @@ namespace OgrenciServisTakip.Model.Company
         [Required]
         [MaxLength(50)]
         public string CompanyName { get; set; }
+
+        [Required, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public bool IsActive { get; set; }
+
+        [Required, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public DateTime CreatedDate { get; set; }
 
         public virtual ICollection<Branch> Branches { get; set; }
     }

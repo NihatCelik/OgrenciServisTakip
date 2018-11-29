@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq.Expressions;
 using OgrenciServisTakip.Model.Company;
 
-namespace OgrenciServisTakip.DAL.Repositories
+namespace OgrenciServisTakip.DAL.Repositories.Company
 {
     public class ResporitoryBranch: Repository<Branch>
     {

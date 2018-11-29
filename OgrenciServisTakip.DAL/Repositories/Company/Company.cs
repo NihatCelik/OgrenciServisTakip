@@ -4,40 +4,40 @@ using System.Data.Entity;
 using System.Linq.Expressions;
 using OgrenciServisTakip.Model.Company;
 
-namespace OgrenciServisTakip.DAL.Repositories
+namespace OgrenciServisTakip.DAL.Repositories.Company
 {
-    public class ResporitoryCompany: Repository<Company>
+    public class ResporitoryCompany: Repository<Model.Company.Company>
     {
         public ResporitoryCompany(DbContext dbContext) : base(dbContext)
         {
         }
 
-        public override IEnumerable<Company> GetAll()
+        public override IEnumerable<Model.Company.Company> GetAll()
         {
             return base.GetAll();
         }
 
-        public override IEnumerable<Company> List(Expression<Func<Company, bool>> predicate)
+        public override IEnumerable<Model.Company.Company> List(Expression<Func<Model.Company.Company, bool>> predicate)
         {
             return base.List(predicate);
         }
 
-        public override Company GetByID(int id)
+        public override Model.Company.Company GetByID(int id)
         {
             return base.GetByID(id);
         }
 
-        public override void Add(Company entity)
+        public override void Add(Model.Company.Company entity)
         {
             base.Add(entity);
         }
 
-        public override void Update(Company entity)
+        public override void Update(Model.Company.Company entity)
         {
             base.Update(entity);
         }
 
-        public override void Delete(Company entity)
+        public override void Delete(Model.Company.Company entity)
         {
             base.Delete(entity);
         }  

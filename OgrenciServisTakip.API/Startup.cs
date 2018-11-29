@@ -1,7 +1,6 @@
 ﻿using System.Web.Http;
 using Microsoft.Owin;
 using Owin;
-using System.Security.Claims;
 using System;
 using Microsoft.Owin.Security.OAuth;
 
@@ -28,7 +27,7 @@ namespace OgrenciServisTakip.API
             OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
             {
                 TokenEndpointPath = new PathString("/token"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
+                AccessTokenExpireTimeSpan = TimeSpan.FromHours(3),
                 AllowInsecureHttp = true,
                 Provider = new SimpleAuthorizationServerProvider()
             };
