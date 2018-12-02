@@ -1,0 +1,57 @@
+﻿@model OgrenciServisTakip.Model.Company.User
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Öğrenci Servis Takip</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!------ Include the above in your HEAD tag ---------->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/fonts/Linearicons-Free-v1.0.0/icon-font.min.css" rel="stylesheet" />
+    <link href="~/Content/util.css" rel="stylesheet" />
+    <link href="~/Content/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url('/images/bg-01.jpg');">
+            <div class="wrap-login100 p-t-30 p-b-50">a
+                <span class="login100-form-title p-b-41">
+                    Kullanıcı Girişi
+                </span>
+                @using (Html.BeginForm("GirisYap", "Account", FormMethod.Post))
+                {
+                    <form class="login100-form validate-form p-b-33 p-t-5">
+                        <div class="wrap-input100 validate-input" data-validate="Enter username">
+                            @Html.TextBoxFor(u => u.ApplicationCompanyID.DealerCode, new { @name = "dealercode", @placeholder = "Bayi Kodu", @class = "input100" })
+                            <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Enter username">
+                            @Html.TextBoxFor(u => u.UserName, new { @name = "username", @placeholder = "Kullanıcı Adı", @class = "input100" })
+                            <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Enter password">
+                            @Html.TextBoxFor(u => u.Password, new { @name = "pass", @placeholder = "Şifre", @class = "input100" })
+                            <span class="focus-input100" data-placeholder="&#xe80f;"></span>
+                        </div>
+
+                        <div class="container-login100-form-btn m-t-32">
+                            <button class="login100-form-btn">Giriş Yap</button>
+                        </div>
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/animsition.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+</body>
+</html>

@@ -14,21 +14,21 @@ namespace OgrenciServisTakip.API.Controllers.School
         }
 
         [HttpPost]
-        public void AddBranch(Model.School.School school)
+        public void AddSchool(Model.School.School school)
         {
             ResporitorySchool resporitorySchool = new ResporitorySchool(new DAL.MyContext());
             resporitorySchool.Add(school);
         }
 
         [HttpPut]
-        public void UpdateBranch(Model.School.School school)
+        public void UpdateSchool(Model.School.School school)
         {
             ResporitorySchool resporitorySchool = new ResporitorySchool(new DAL.MyContext());
             resporitorySchool.Update(school);
         }
 
         [HttpDelete]
-        public void DeleteBranch(Model.School.School school)
+        public void DeleteSchool(Model.School.School school)
         {
             ResporitorySchool resporitorySchool = new ResporitorySchool(new DAL.MyContext());
             resporitorySchool.Delete(school);
