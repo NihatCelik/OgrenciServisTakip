@@ -15,25 +15,25 @@ namespace OgrenciServisTakip.API
             // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=316888
             HttpConfiguration config = new HttpConfiguration();
 
-            ConfigureOAuth(app);
+            //ConfigureOAuth(app);
 
             WebApiConfig.Register(config);
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             app.UseWebApi(config);
         }
 
-        private void ConfigureOAuth(IAppBuilder app)
-        {
-            OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
-            {
-                TokenEndpointPath = new PathString("/token"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromHours(3),
-                AllowInsecureHttp = true,
-                Provider = new SimpleAuthorizationServerProvider()
-            };
+        //private void ConfigureOAuth(IAppBuilder app)
+        //{
+        //    OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
+        //    {
+        //        TokenEndpointPath = new PathString("/api/token"),
+        //        AccessTokenExpireTimeSpan = TimeSpan.FromHours(3),
+        //        AllowInsecureHttp = true,
+        //        Provider = new SimpleAuthorizationServerProvider()
+        //    };
 
-            app.UseOAuthAuthorizationServer(OAuthServerOptions);
-            app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
-        }
+        //    app.UseOAuthAuthorizationServer(OAuthServerOptions);
+        //    app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
+        //}
     }
 }

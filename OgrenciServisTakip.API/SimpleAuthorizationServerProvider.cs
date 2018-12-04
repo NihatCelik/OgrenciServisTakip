@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using System.Web.Http.Results;
 using Microsoft.Owin.Security.OAuth;
-using OgrenciServisTakip.API.Controllers;
 using OgrenciServisTakip.API.Controllers.Company;
 
 namespace OgrenciServisTakip.API
@@ -18,7 +17,7 @@ namespace OgrenciServisTakip.API
         {
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
             UserController uc = new UserController();
-            if (uc.GetUsers(context.UserName, context.Password) is OkNegotiatedContentResult<Model.Company.User> result)
+            if (uc.GetUser(context.UserName, context.Password) is OkNegotiatedContentResult<Model.Company.User> result)
             {
                 identity.AddClaim(new Claim("username", result.Content.UserID.ToString()));
                 context.Validated(identity);
