@@ -3,8 +3,7 @@ using OgrenciServisTakip.Model.Company;
 using System.Web.Http;
 
 namespace OgrenciServisTakip.API.Controllers.Company
-{
-    [Authorize]
+{ 
     public class BranchController : ApiController
     {
         [HttpGet]

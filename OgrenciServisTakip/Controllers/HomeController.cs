@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace OgrenciServisTakip.Controllers
 {
-    public class DefaultController : Controller
+    public class HomeController : Controller
     {
         // GET: Default
         public ActionResult Index()

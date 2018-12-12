@@ -3,8 +3,7 @@ using OgrenciServisTakip.Model.School;
 using System.Web.Http;
 
 namespace OgrenciServisTakip.API.Controllers.School
-{
-    [Authorize]
+{ 
     public class SchoolClassController : ApiController
     {
         [HttpGet]

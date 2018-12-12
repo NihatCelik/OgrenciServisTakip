@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>Servisim @ViewBag.Title</title>
     @Styles.Render("~/Content/css")
-   @* @Scripts.Render("~/bundles/modernizr")*@
+    @*@Scripts.Render("~/bundles/modernizr")*@
     <style>
         .small-box h3 {
             font-weight: normal;
@@ -13,36 +13,448 @@
         }
     </style>
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
+<body class="skin-blue">
+    <!-- header logo: style can be found in header.less -->
+    <header class="header">
+        <a href="~/Home/" class="logo">
+            <!-- Add the class icon to your logo image or logo icon to add the margining -->
+            Servisim
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="navbar-right">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <!-- Messages: style can be found in dropdown.less-->
+                    <li class="dropdown messages-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-envelope"></i>
+                            <span class="label label-success">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 4 messages</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li>
+                                        <!-- start message -->
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                                            </div>
+                                            <h4>
+                                                Support Team
+                                                <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li><!-- end message -->
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="img/avatar2.png" class="img-circle" alt="user image" />
+                                            </div>
+                                            <h4>
+                                                AdminLTE Design Team
+                                                <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="img/avatar.png" class="img-circle" alt="user image" />
+                                            </div>
+                                            <h4>
+                                                Developers
+                                                <small><i class="fa fa-clock-o"></i> Today</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="img/avatar2.png" class="img-circle" alt="user image" />
+                                            </div>
+                                            <h4>
+                                                Sales Department
+                                                <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="img/avatar.png" class="img-circle" alt="user image" />
+                                            </div>
+                                            <h4>
+                                                Reviewers
+                                                <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer"><a href="#">See All Messages</a></li>
+                        </ul>
+                    </li>
+                    <!-- Notifications: style can be found in dropdown.less -->
+                    <li class="dropdown notifications-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-warning"></i>
+                            <span class="label label-warning">10</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 10 notifications</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="ion ion-ios7-people info"></i> 5 new members joined today
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-warning danger"></i> Very long description here that may not fit into the page and may cause design problems
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users warning"></i> 5 new members joined
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ion ion-ios7-cart success"></i> 25 sales made
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ion ion-ios7-person danger"></i> You changed your username
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer"><a href="#">View all</a></li>
+                        </ul>
+                    </li>
+                    <!-- Tasks: style can be found in dropdown.less -->
+                    <li class="dropdown tasks-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-tasks"></i>
+                            <span class="label label-danger">9</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 9 tasks</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li>
+                                        <!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Design some buttons
+                                                <small class="pull-right">20%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">20% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li><!-- end task item -->
+                                    <li>
+                                        <!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Create a nice theme
+                                                <small class="pull-right">40%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">40% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li><!-- end task item -->
+                                    <li>
+                                        <!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Some task I need to do
+                                                <small class="pull-right">60%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">60% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li><!-- end task item -->
+                                    <li>
+                                        <!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Make beautiful transitions
+                                                <small class="pull-right">80%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">80% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li><!-- end task item -->
+                                </ul>
+                            </li>
+                            <li class="footer">
+                                <a href="#">View all tasks</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span>Nihat Çelik <i class="caret"></i></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header bg-light-blue">
+                                <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                                <p>
+                                    Nihat Çelik - Yönetici
+                                    <small>Şirket Yöneticisi</small>
+                                </p>
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">Tahsilatlarım</a>
+                                </div>
+
+                                <div class="pull-left" style="margin-left:6px">
+                                    <a href="#" class="btn btn-default btn-flat">Ayarlar</a>
+                                </div>
+
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-default btn-flat">Çıkış Yap</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        </nav>
+    </header>
+
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="left-side sidebar-offcanvas">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                    </div>
+                    <div class="pull-left info">
+                        <p>Merhaba, Nihat</p>
+                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    </div>
+                </div>
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group">
+                        <input type="text" name="q" class="form-control" placeholder="Search..." />
+                        <span class="input-group-btn">
+                            <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
+                </form>
+                <!-- /.search form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa"></i>
+                            <span>Öğrenci İşlemleri</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Öğrenci Ekle</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Öğrenci Listesi</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Öğrencileri Sil</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Silinen Öğrencileri Geri Al</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Taksit İşlemleri/Tahsilat Yap</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Toplu Tahsilat</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Toplu Fatura Kesimi</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Etiket Yazdır</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Veli Görüşme Listesi</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Öğrencileri Araçlara Yerleştir</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa"></i>
+                            <span>Tur İşlemleri</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Taşıt İşlemleri</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Sürücü İşlemleri</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Taşıt Evrak Hatırlatmaları</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa"></i>
+                            <span>Taşıt İşlemleri</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Taşıt İşlemleri</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Sürücü İşlemleri</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Taşıt Evrak Hatırlatmaları</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa"></i>
+                            <span>Personel İşlemleri</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Personel İşlemleri</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Mesai İşlemleri</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Maaş İşlemleri</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa"></i> <span>Banka İşlemleri</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Banka Hesap İşlemleri</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Pos Hesap İşlemleri</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Para Yatır - Para Çek</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Banka - Kasa Para Transferi</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa"></i> <span>Kasa</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Genel Kasa</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Gelir İşlemleri</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Gider İşlemleri</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa"></i> <span>Sözleşmeler</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Öğrenci Sözleşmesi</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Taşıt Sözleşmesi</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Sürücü Sözleşmesi</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa"></i> <span>Raporlar</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Ödemesi Yaklaşan Öğrenciler</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Bugün Ödemesi Olan Öğrenciler</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Ödemesi Geçen Öğrenciler</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Günlük Tahsilat Listesi</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> İptal Olan Tahsilatlar Listesi</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Araç Hesap Listesi</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Araç Grubuna Göre Öğrenciler</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Doğum Günleri</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> İzin Kağıdı</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Bilgi Formu</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> SMS Modülü Kullanan Öğrenciler</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Veli Android Giriş Logları</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> SMS Gönderim Raporları</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa"></i> <span>Tanımlamalar</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="~/Tanimlamalar/Okul"><i class="fa fa-angle-double-right"></i> Okul Tanımla</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Sınıf Tanımla</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Servis Grubu Tanımla</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Hızlı Fiyat Tanımla</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> -------------------------------------</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Mahalle Tanımla</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Cadde Tanımla</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Sokak Tanımla</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> -------------------------------------</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Gelir Kartı Tanımla</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Gider Kartı Tanımla</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> -------------------------------------</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Per. Grubu Tanımla</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Per. Departmanı Tanımla</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> -------------------------------------</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Hazır Mesaj Tanımla</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> -------------------------------------</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Taşıt Modeli Tanımla</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa"></i> <span>Ayarlar</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Genel Ayarlar</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Kullanıcı Yetkileri</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Right side column. Contains the navbar and content of the page -->
+        <aside class="right-side">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    Dashboard
+                    <small>Control panel</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                </ol>
+            </section>
+            <!-- Main content -->
+            @RenderBody()
+        </aside><!-- /.right-side -->
+    </div><!-- ./wrapper -->
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>

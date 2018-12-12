@@ -24,7 +24,8 @@ namespace OgrenciServisTakip.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Default");
+                Session["User"] = u;
+                return RedirectToAction("Index", "Home");
             }
         }
     }
