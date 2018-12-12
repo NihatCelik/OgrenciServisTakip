@@ -28,5 +28,11 @@ namespace OgrenciServisTakip.Controllers
                 return RedirectToAction("Index", "Home");
             }
         }
+
+        public ActionResult CikisYap()
+        {
+            Session.Abandon();
+            return RedirectToAction("GirisYap", "Account");
+        }
     }
 }
