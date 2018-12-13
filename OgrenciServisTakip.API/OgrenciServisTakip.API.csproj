@@ -130,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Business.cs" />
     <Compile Include="Controllers\Company\CompanyController.cs" />
     <Compile Include="Controllers\Company\BranchController.cs" />
     <Compile Include="Controllers\Company\UserController.cs" />

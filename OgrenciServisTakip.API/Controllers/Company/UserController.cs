@@ -14,7 +14,6 @@ namespace OgrenciServisTakip.API.Controllers.Company
             return Ok(resporitoryUser.GetAll());
         }
 
-        [AllowAnonymous]
         [HttpGet]
         public IHttpActionResult GetUser(string userName, string password)
         {
@@ -24,13 +23,17 @@ namespace OgrenciServisTakip.API.Controllers.Company
             else return Ok(result);
         }
 
-        [HttpPost]
+        [HttpGet]
         public IHttpActionResult ResetPassword(string email)
         {
             ResporitoryUser resporitoryUser = new ResporitoryUser(new DAL.MyContext());
             var result = resporitoryUser.List(u => u.EMail == email).FirstOrDefault();
             if (result == null) return NotFound();
-            else return Ok(result);
+            else
+            {
+                Business.MailSender(result.Password, result.EMail);
+                return Ok();
+            }
         }
 
         [HttpPost]
