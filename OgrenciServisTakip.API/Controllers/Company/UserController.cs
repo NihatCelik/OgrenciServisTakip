@@ -25,6 +25,15 @@ namespace OgrenciServisTakip.API.Controllers.Company
         }
 
         [HttpPost]
+        public IHttpActionResult ResetPassword(string email)
+        {
+            ResporitoryUser resporitoryUser = new ResporitoryUser(new DAL.MyContext());
+            var result = resporitoryUser.List(u => u.EMail == email).FirstOrDefault();
+            if (result == null) return NotFound();
+            else return Ok(result);
+        }
+
+        [HttpPost]
         public void AddUser(User user)
         {
             ResporitoryUser resporitoryUser = new ResporitoryUser(new DAL.MyContext());

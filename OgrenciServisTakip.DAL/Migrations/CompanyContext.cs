@@ -45,7 +45,8 @@ namespace OgrenciServisTakip.DAL.Migrations
                     Name = "Nihat",
                     Surname = "Çelik",
                     UserName = "Nihat",
-                    Password = "123"
+                    Password = "123",
+                    EMail = "14542008@firat.edu.tr"
                 },
                 new User
                 {
@@ -54,7 +55,8 @@ namespace OgrenciServisTakip.DAL.Migrations
                     Name = "Kemal",
                     Surname = "Keskin",
                     UserName = "Kemal",
-                    Password = "123"
+                    Password = "123",
+                    EMail = "14542027@firat.edu.tr"
                 }
             };
             context.Users.AddRange(listUsers);

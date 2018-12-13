@@ -32,6 +32,10 @@ namespace OgrenciServisTakip.Model.Company
         [MaxLength(15)]
         public string Surname { get; set; }
 
+        [Required]
+        [MaxLength(40)]
+        public string EMail { get; set; }
+
         [Required, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public bool IsActive { get; set; }
 

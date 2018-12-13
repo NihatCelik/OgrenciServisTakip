@@ -29,6 +29,11 @@ namespace OgrenciServisTakip.Controllers
             }
         }
 
+        public ActionResult SifremiUnuttum()
+        {
+            return View();
+        }
+
         public ActionResult CikisYap()
         {
             Session.Abandon();
